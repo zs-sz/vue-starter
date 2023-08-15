@@ -9,7 +9,7 @@ const router = useRouter();
 const route = useRoute();
 let allRoutes = router.getRoutes();
 if (props.noHome) {
-	allRoutes = allRoutes.filter((item) => item.path !== "/");
+	allRoutes.shift();
 }
 </script>
 
@@ -17,10 +17,15 @@ if (props.noHome) {
 	<nav>
 		<ul>
 			<li v-for="r in allRoutes">
-				<a :class="{ selected: route.path === r.path }" :href="r.path">{{ r.meta.title }}</a>
+				<a v-if="route.path !== r.path" :href="r.path">{{ r.meta.title }}</a>
+				<span class="selected" v-else>{{ r.meta.title }}</span>
 			</li>
 		</ul>
 	</nav>
 </template>
 
-<style></style>
+<style>
+nav .selected {
+	font-weight: 700;
+}
+</style>
