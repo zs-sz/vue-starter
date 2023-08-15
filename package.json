@@ -1,0 +1,26 @@
+{
+  "name": "spat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chenfengyuan/vue-barcode": "^2.0.1",
+    "jsbarcode": "^3.11.5",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "prettier": "^3.0.1",
+    "typescript": "^5.0.2",
+    "unplugin-vue-router": "^0.6.4",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
