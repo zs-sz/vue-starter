@@ -4,6 +4,7 @@ definePage({
 	meta: {
 		title: "About Us",
 		description: "Fill - Description",
+		navlink: true,
 	},
 });
 const route = useRoute();

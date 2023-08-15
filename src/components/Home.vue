@@ -9,7 +9,7 @@ const toHome = () => {
 
 <template>
 	<div>
-		<a title="home" @prevent.click="toHome()" href="/"><img class="branding" src="/public/icon.svg" alt="" /></a>
+		<a title="home" @prevent.click="toHome()" href="/"><img class="branding" src="/icon.svg" alt="home" /></a>
 	</div>
 </template>
 

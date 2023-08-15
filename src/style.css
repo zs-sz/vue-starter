@@ -192,6 +192,13 @@ template {
   display: none;
 }
 
+/*APP*/
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: inherit;
+}
 img.branding {
   display: block;
   width: 50px;

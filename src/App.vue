@@ -17,7 +17,7 @@ const backToTop = () => {
     <div class="mobile-only to-nav">
       <a href="#navigation">{{ NAV_LABEL }}</a>
     </div>
-    <div id="navigation" class="nav-bar">
+    <div id="navigation" autofocus="false" class="nav-bar">
       <Home />
       <NavLinks />
       <button class="button mobile-only" @click="backToTop()">{{ BACK_TO_TOP }}</button>
@@ -32,21 +32,30 @@ const backToTop = () => {
 .app {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 .nav-bar {
   order: 2;
+  padding-top: 1rem;
 }
 .page,
 .nav-bar {
   min-height: 100vh;
 }
 
+nav ul {
+  padding: 0;
+  list-style: none;
+}
 @media screen and (min-width: 42rem) {
-  .app {
-    padding: 1rem;
+  nav ul {
+    display: flex;
+    gap: 0 10px;
   }
+
   .nav-bar {
     order: 0;
+    padding: 0;
   }
 
   .mobile-only {
@@ -62,13 +71,6 @@ const backToTop = () => {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-  }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 0 10px;
   }
 }
 </style>

@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from "vue-router/auto";
 
-const props = defineProps({
-	noHome: { type: Boolean, required: false, default: false },
-});
-
 const router = useRouter();
 const route = useRoute();
-let allRoutes = router.getRoutes();
-if (props.noHome) {
-	allRoutes.shift();
-}
+let allRoutes = router.getRoutes().filter((r) => r.meta.navlink);
+
+console.log(allRoutes);
 </script>
 
 <template>
