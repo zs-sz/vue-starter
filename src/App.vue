@@ -5,7 +5,7 @@ import { useLink, useRoute, useRouter } from "vue-router/auto";
 import NavLinks from "./components/NavLinks.vue";
 import Home from "./components/Home.vue";
 
-const NAV_LABEL = "Navigation";
+const NAV_LABEL = "nav";
 const BACK_TO_TOP = "back";
 const backToTop = () => {
   document.documentElement.scrollTop = 0;
