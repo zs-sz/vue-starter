@@ -5,10 +5,10 @@ import App from "./App.vue";
 
 import { createWebHistory, createRouter, setupDataFetchingGuard } from "vue-router/auto";
 
+// file based routing, defaults to -> .src/pages/index.vue
 const router = createRouter({
 	history: createWebHistory(),
 	extendRoutes: (routes) => {
-		// routes.find((r) => r.name === '/')!.meta = {}
 		return routes;
 	},
 });
@@ -24,10 +24,6 @@ const store = createStore({
 	mutations: {},
 	actions: {},
 });
-
-function syncLocal(state) {
-	localStorage.setItem("state", JSON.stringify(state));
-}
 
 const app = createApp({
 	render: () => h(App),
