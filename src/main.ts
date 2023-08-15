@@ -12,9 +12,18 @@ const router = createRouter({
 		return routes;
 	},
 });
+const DEFAULT_TITLE = "App";
+
+router.afterEach((to, from) => {
+	// Use next tick to handle router history correctly
+	// see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
+
+	document.title = to.meta.title || DEFAULT_TITLE;
+});
 
 setupDataFetchingGuard(router);
 
+// STORE
 const store = createStore({
 	state() {
 		return {

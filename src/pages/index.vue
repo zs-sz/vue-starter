@@ -1,7 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePage({
+	meta: {
+		title: "Home",
+		description: "Home Page",
+	},
+});
+</script>
 
 <template>
-	<h1>Index</h1>
+	<h3>Home</h3>
 </template>
 
-<style scoped></style>
+<style></style>

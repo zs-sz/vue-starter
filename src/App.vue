@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useStore } from "vuex";
+// import { useStore } from "vuex";
 
-// Store
-const store = useStore();
-console.log(new Date(store.state.createdAt));
+import { useLink, useRoute, useRouter } from "vue-router/auto";
+import NavLinks from "./components/NavLinks.vue";
 </script>
 
 <template>
   <div class="app">
+    <NavLinks />
     <RouterView />
   </div>
 </template>
 
-<style scoped></style>
+<style></style>
