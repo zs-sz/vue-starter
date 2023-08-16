@@ -12,7 +12,7 @@ const r = useRoute();
 const router = useRouter();
 </script>
 <template>
-	<h2>id:{{ r.meta.title }}</h2>
+	<h2>{{ r.meta.title }}</h2>
 	<p>
 		{{ r.meta.description }} <b>{{ r.params.id }}</b>
 	</p>

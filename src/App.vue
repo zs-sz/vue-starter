@@ -46,7 +46,7 @@ nav ul {
   list-style: none;
 }
 @media screen and (min-width: 42rem) {
-  nav ul {
+  nav.main ul {
     display: flex;
     gap: 0 10px;
   }

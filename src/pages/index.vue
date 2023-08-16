@@ -4,6 +4,7 @@ definePage({
 	meta: {
 		title: "Home",
 		description: "Home Page",
+		navlink: true,
 	},
 });
 const route = useRoute();
@@ -11,6 +12,7 @@ const route = useRoute();
 
 <template>
 	<h2>{{ route.meta.title }}</h2>
+	<p>{{ route.meta.description }}</p>
 </template>
 
 <style></style>
