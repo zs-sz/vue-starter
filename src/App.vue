@@ -13,33 +13,31 @@ const backToTop = () => {
 </script>
 
 <template>
-  <div class="app">
-    <div class="mobile-only to-nav">
-      <a href="#navigation">{{ NAV_LABEL }}</a>
-    </div>
-    <div id="navigation" autofocus="false" class="nav-bar">
-      <Home />
-      <NavLinks />
-      <button class="button mobile-only" @click="backToTop()">{{ BACK_TO_TOP }}</button>
-    </div>
-    <div class="page">
-      <RouterView />
-    </div>
+  <div class="mobile-only to-nav">
+    <a href="#navigation">{{ NAV_LABEL }}</a>
+  </div>
+  <div id="navigation" autofocus="false" class="main-nav">
+    <Home />
+    <NavLinks />
+    <button class="button mobile-only" @click="backToTop()">{{ BACK_TO_TOP }}</button>
+  </div>
+  <div class="page">
+    <RouterView />
   </div>
 </template>
 
 <style>
-.app {
+#app {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-.nav-bar {
+.main-nav {
   order: 2;
   padding-top: 1rem;
 }
 .page,
-.nav-bar {
+.main-nav {
   min-height: 100vh;
 }
 
@@ -53,7 +51,7 @@ nav ul {
     gap: 0 10px;
   }
 
-  .nav-bar {
+  .main-nav {
     order: 0;
     padding: 0;
   }
@@ -63,10 +61,10 @@ nav ul {
   }
 
   .page,
-  .nav-bar {
+  .main-nav {
     min-height: auto;
   }
-  .nav-bar {
+  .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
