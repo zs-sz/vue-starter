@@ -22,9 +22,18 @@ const requestDynamic = (id) => {
 <template>
 	<h2>{{ r.meta.title }}</h2>
 	<p>{{ r.meta.description }}</p>
-	<ul>
-		<li v-for="id in testData">
+	<ul class="cards">
+		<li class="card" v-for="id in testData">
 			<a @click.prevent="requestDynamic(id)" href="#">{{ id }}</a>
 		</li>
 	</ul>
 </template>
+<style>
+body {
+	background-color: #f2f2f2;
+}
+ul.cards {
+	padding: 0;
+	list-style-type: none;
+}
+</style>

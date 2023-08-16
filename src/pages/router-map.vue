@@ -12,7 +12,6 @@ const router = useRouter();
 const route = useRoute();
 const NONAME = "NoNe";
 let allRoutes = router.getRoutes();
-console.log(allRoutes);
 </script>
 
 <template>
@@ -37,6 +36,7 @@ console.log(allRoutes);
 body {
 	background-color: #f2f2f2;
 }
+
 dl.kv {
 	display: flex;
 	flex-wrap: wrap;
@@ -52,12 +52,15 @@ dl.kv dd {
 dl.kv > * {
 	flex: 1 1 100%;
 }
+
 dl.kv dt {
 	font-weight: 700;
 }
+
 dt:after {
 	content: ":";
 }
+
 @media screen and (min-width: 22rem) {
 	dl.kv > * {
 		flex: 1 1 50%;
@@ -68,7 +71,7 @@ dt:after {
 		display: block;
 		width: 200%;
 		height: 1px;
-		border-bottom: 1px solid #a1a1a1;
+		border-bottom: 1px solid #000;
 		padding-bottom: 0.25rem;
 		margin-bottom: 0.25rem;
 	}
